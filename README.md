@@ -9,7 +9,7 @@ Git komandalarini avtomatlashtiruvchi oddiy CLI vosita.
 ### 🔹 Linux / macOS
 
 ```bash
-git clone https://github.com/azizbekxasanov/flashcli.git
+git clone https://github.com/khbdev/flash-cli.git
 cd flashcli
 go build -o flash
 sudo mv flash /usr/local/bin/
@@ -22,7 +22,7 @@ sudo mv flash /usr/local/bin/
 ### 🔹 Windows
 
 ```powershell
-git clone https://github.com/azizbekxasanov/flashcli.git
+git clone https://github.com/khbdev/flash-cli.git
 cd flashcli
 go build -o flash.exe
 ```
