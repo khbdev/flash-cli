@@ -22,12 +22,19 @@ sudo mv flash /usr/local/bin/
 ### 🔹 Windows
 
 ```powershell
-git clone https://github.com/khbdev/flash-cli.git
+git clone https://github.com/azizbekxasanov/flashcli.git
 cd flashcli
 go build -o flash.exe
+
+REM 👉 C:\flashcli degan papka ochamiz va flash.exe ni o‘sha yerga ko‘chiramiz
+mkdir C:\flashcli
+move flash.exe C:\flashcli
+
+REM 👉 So‘ng bu papkani global PATH'ga qo‘shamiz
+setx PATH \"%PATH%;C:\flashcli\"
 ```
 
-✅ `flash.exe` faylini `C:\Windows\System32` yoki PATH listga qo‘shilgan boshqa folderga nusxa ko‘chiring.
+✅ Endi terminalni **yopib qayta oching**, `flash` komandasi istalgan joyda ishlaydi.
 
 ---
 
