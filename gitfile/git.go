@@ -17,7 +17,7 @@ func Start(msg string) {
     // 📦 1. config.json dan default branchni o‘qish////
     configData, err := os.ReadFile(".flash/config.json")
     if err != nil {
-        fmt.Println("❌ config.json topilmadiiiiiiiiiii:", err)
+        fmt.Println("❌ config.json topilmadi:", err)
         return
     }
 
