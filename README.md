@@ -69,7 +69,8 @@ git push
 |-----------------------|------------------------------------------|
 | `flash init`          | Loyiha ichida `.flash/` papka yaratadi  |
 | `flash start "xabar"` | Git add, commit va push qiladi           |
+| `flash -b new-branch` | branch ozgartiradi            |
+| `flash help` | nimadir chunmsangiz help commandasi            |
 
 ---
 
-Tayyor. Endi `flash` orqali har qanday Git loyihani tez va soddalashtirilgan tarzda boshqarish mumkin.
