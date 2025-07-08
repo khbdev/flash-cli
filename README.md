@@ -10,7 +10,7 @@ Git komandalarini avtomatlashtiruvchi oddiy CLI vosita.
 
 ```bash
 git clone https://github.com/khbdev/flash-cli.git
-cd flashcli
+cd flash-cli
 go build -o flash
 sudo mv flash /usr/local/bin/
 ```
