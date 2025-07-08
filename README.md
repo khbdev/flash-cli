@@ -22,13 +22,13 @@ sudo mv flash /usr/local/bin/
 ### 🔹 Windows
 
 ```powershell
-git clone https://github.com/azizbekxasanov/flashcli.git
-cd flashcli
+git clone https://github.com/khbdev/flash-cli.git
+cd flash-cli
 go build -o flash.exe
 
-REM 👉 C:\flashcli degan papka ochamiz va flash.exe ni o‘sha yerga ko‘chiramiz
-mkdir C:\flashcli
-move flash.exe C:\flashcli
+REM 👉 C:\flash-cli degan papka ochamiz va flash.exe ni o‘sha yerga ko‘chiramiz
+mkdir C:\flash-cli
+move flash.exe C:\flash-cli
 
 REM 👉 So‘ng bu papkani global PATH'ga qo‘shamiz
 setx PATH \"%PATH%;C:\flashcli\"
