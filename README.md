@@ -1,13 +1,7 @@
-Tushundim, Azizbek ✅ — `README.md` foydalanuvchi **tez o‘qiydigan**, **qisqa**, lekin **tushunarli** formatda bo‘lishi kerak.
 
-Mana optimallashtirilgan, ixcham, ammo barcha zarur ma’lumotlarni o‘z ichiga olgan versiyasi:
-
----
-
-````md
 # ⚡ Flash CLI
 
-Git komandalarini va o‘zbekcha developerlar uchun paketlarni avtomatlashtiruvchi CLI vosita.
+Git komandalarini va  developerlar uchun paketlarni avtomatlashtiruvchi CLI vosita.
 
 ---
 
