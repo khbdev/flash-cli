@@ -1,83 +1,76 @@
-# ⚡ Flash CLI
+Tushundim, Azizbek ✅ — `README.md` foydalanuvchi **tez o‘qiydigan**, **qisqa**, lekin **tushunarli** formatda bo‘lishi kerak.
 
-Git komandalarini avtomatlashtiruvchi oddiy CLI vosita.
+Mana optimallashtirilgan, ixcham, ammo barcha zarur ma’lumotlarni o‘z ichiga olgan versiyasi:
 
 ---
 
-## 🛠 O‘rnatish
+````md
+# ⚡ Flash CLI
 
-### 🔹 Linux / macOS
+Git komandalarini va o‘zbekcha developerlar uchun paketlarni avtomatlashtiruvchi CLI vosita.
+
+---
+
+## 🔧 O‘rnatish (Linux / macOS)
 
 ```bash
 git clone https://github.com/khbdev/flash-cli.git
 cd flash-cli
 go build -o flash
 sudo mv flash /usr/local/bin/
-```
+````
 
-> Endi `flash` terminalda istalgan joyda ishlaydi.
-
----
-
-### 🔹 Windows
-
-```powershell
-git clone https://github.com/khbdev/flash-cli.git
-cd flash-cli
-go build -o flash.exe
-
-REM 👉 C:\flash-cli degan papka ochamiz va flash.exe ni o‘sha yerga ko‘chiramiz
-mkdir C:\flash-cli
-move flash.exe C:\flash-cli
-
-REM 👉 So‘ng bu papkani global PATH'ga qo‘shamiz
-setx PATH \"%PATH%;C:\flashcli\"
-```
-
-✅ Endi terminalni **yopib qayta oching**, `flash` komandasi istalgan joyda ishlaydi.
+✅ Endi `flash` terminalda istalgan joyda ishlaydi.
 
 ---
 
-## 💻 Ishlatish
-
-### 🔹 1. Loyiha papkasiga kir:
+## 🚀 Tezkor foydalanish
 
 ```bash
 cd my-project/
-```
-
-### 🔹 2. Flash’ni boshlash (bir martalik):
-
-```bash
-flash init
-```
-
-Bu `.flash/` papkasini yaratadi.
-
-### 🔹 3. Git komandalarini avtomatlashtirish:
-
-```bash
-flash start "commit xabari"
-```
-
-Bu quyidagilarni bajaradi:
-
-```bash
-git add .
-git commit -m "commit xabari"
-git push
+flash init                    # .flash/ yaratadi
+flash start "msg"            # git add . + commit + push
+flash -b main                # default branch o‘zgartirish
 ```
 
 ---
 
-## 📋 Komandalar
+## 📦 Box — doimiy komandalar uchun qutilar
 
-| Komanda               | Tavsifi                                 |
-|-----------------------|------------------------------------------|
-| `flash init`          | Loyiha ichida `.flash/` papka yaratadi  |
-| `flash start "xabar"` | Git add, commit va push qiladi           |
-| `flash -b new-branch` | branch ozgartiradi            |
-| `flash help` | nimadir chunmsangiz help commandasi            |
+Laravel, Go, React, Django kabi texnologiyalar uchun **o‘z komandalaringni saqlab** ishlat!
+
+```bash
+flash box -c laravel         # laravel.box fayl yaratadi
+flash box laravel            # ichidagi komandalarni bajaradi
+flash box edit laravel       # faylni tahrirlash
+flash box status             # mavjud box’lar ro‘yxati
+flash box remove laravel     # box’ni o‘chirish
+```
+
+Box fayllar manzili: `~/.flash/boxes/`
 
 ---
+
+## 🔍 Komandalar jadvali
+
+| Komanda                  | Tavsifi                                   |
+| ------------------------ | ----------------------------------------- |
+| `flash init`             | Loyiha ichida `.flash/` yaratadi          |
+| `flash start "xabar"`    | Git add, commit va push qiladi            |
+| `flash -b branch`        | Default branch’ni o‘zgartiradi            |
+| `flash box -c <nom>`     | Yangi box yaratadi                        |
+| `flash box <nom>`        | Box ichidagi komandalarni ishga tushuradi |
+| `flash box status`       | Barcha box’lar ro‘yxatini ko‘rsatadi      |
+| `flash box edit <nom>`   | Box faylni tahrirlash                     |
+| `flash box remove <nom>` | Box faylni o‘chirish                      |
+| `flash help`             | Yordam oynasini ko‘rsatadi                |
+
+---
+
+## 👤 Muallif
+
+Made with ❤️ by [Azizbek Xasanov](https://github.com/khbdev)
+
+```
+
 
