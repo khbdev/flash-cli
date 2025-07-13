@@ -65,6 +65,3 @@ Box fayllar manzili: `~/.flash/boxes/`
 
 Made with ❤️ by [Azizbek Xasanov](https://github.com/khbdev)
 
-```
-
-
