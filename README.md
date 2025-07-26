@@ -19,9 +19,10 @@ sudo mv flash /usr/local/bin/
 #### Versiya 2.0.0:
 
 ```bash
-wget https://github.com/khbdev/flash-cli/releases/download/v2.0.0/flash
+wget https://github.com/khbdev/flash-cli/releases/download/v2.00/flash
 chmod +x flash
 sudo mv flash /usr/local/bin/
+
 ```
 
 ### Windows (PowerShell):
