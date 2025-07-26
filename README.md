@@ -1,8 +1,4 @@
-Albatta! Quyida `README.md` faylingga **v1.0.0 va v2.0.0** versiyalari uchun o‘rnatish komandalarini qo‘shib, to‘g‘rilangan ko‘rinishini beraman:
 
----
-
-````md
 # ⚡ Flash CLI
 
 Git komandalarini va developerlar ishini soddalashtiruvchi CLI vosita.
