@@ -1,6 +1,0 @@
-package githubrepo
-
-
-func  GithubRepoCommand(){
-
-}

@@ -1,15 +1,18 @@
 package main
 
 import (
+	"fmt"
+
+	"os"
+	"time"
+
 	"flash/box"
 	"flash/configbranchedit"
-
 	"flash/flashcore"
 	"flash/gitfile"
 	"flash/helpfunction"
-	"fmt"
-	"os"
-	"time"
+	"flash/repo"
+	"flash/token"
 )
 
 func main() {
@@ -19,14 +22,16 @@ func main() {
 		return
 	}
 
-	// 🔀 Variant: flash -b dev  → default branch o‘zgartirish
-    if configbranchedit.Configbranchedit(){
-  return
-	}
-
-	// 🔄 Komanda: init | start | help
 	command := os.Args[1]
 
+	// 🔀 Branch config: flash -b dev
+	if command == "-b" {
+		if configbranchedit.Configbranchedit() {
+			return
+		}
+	}
+
+	// 🔁 Komandalar
 	switch command {
 	case "init":
 		flashcore.InitProject()
@@ -37,21 +42,23 @@ func main() {
 			fmt.Println("❗ start uchun commit xabarini kiriting. Masalan: flash start \"Initial commit\"")
 			return
 		}
-
 		msg := os.Args[2]
 		gitfile.Start(msg)
-		
+
 	case "box":
-	box.CommandBox(os.Args[2:])
+		box.CommandBox(os.Args[2:])
+
+	case "repo":
+		repo.Repo()
+
+	case "token":
+		token.Token(os.Args[2:])
 
 	case "help":
-		  helpfunction.PrintHelp()
+		helpfunction.PrintHelp()
 
 	default:
 		fmt.Println("❓ Noma’lum komanda:", command)
 		helpfunction.PrintHelp()
 	}
 }
-
-
-
