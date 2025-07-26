@@ -48,27 +48,46 @@ Linux va macOS foydalanuvchilari uchun to‘liq qo‘llab-quvvatlanad
 
 ---
 
-## 🚀 Tez foydalanish
+Albatta! Quyidagicha **toza va bir xil uslubda** tuzib berdim. Formatlash, imlo, tushunarlilik jihatidan yaxshilandi:
+
+---
+
+## 📁 Loyihaviy komandalar
 
 ```bash
-flash init                # .flash/ yaratadi
-flash start "msg"         # Git add, commit va push
-flash -b main             # Default branch o‘zgartiradi
+flash init                 # Loyihani boshlash (.flash papka va config.json)
+flash start "msg"          # Git add, commit, push bajarish
+flash -b main              # Default branchni o‘zgartirish (config.json)
 ```
 
 ---
 
-## 📦 Boxlar
+## 📦 Box komandalar
 
 ```bash
-flash box -c laravel         # laravel.box yaratadi
-flash box laravel            # komandalarni bajaradi
-flash box edit laravel       # tahrirlash
-flash box status             # ro‘yxatini ko‘rsatadi
-flash box remove laravel     # o‘chirish
+flash box -c laravel       # Yangi box yaratish (laravel.box)
+flash box laravel          # Box ichidagi komandalarni ishga tushurish
+flash box edit laravel     # Box faylni tahrirlash (nano bilan)
+flash box status           # Mavjud box'lar ro‘yxatini ko‘rsatish
+flash box remove laravel   # Box faylni o‘chirish
 ```
 
-Box fayllar joylashuvi: `~/.flash/boxes/`
+📁 Box fayllar joylashuvi: `~/.flash/boxes/`
+
+---
+
+## 🔑 Token va repo komandalar
+
+```bash
+flash token -c             # GitHub Personal Access Token saqlash
+flash token                # Tokenni ko‘rsatish
+flash token -d             # Tokenni o‘chirish
+
+flash repo                 # GitHub'da yangi repository yaratish (public)
+flash repo -p              # GitHub'da yangi repository yaratish (private)
+```
+
+📁 Token saqlanish joyi: `~/.flash/config.json`
 
 ---
 
