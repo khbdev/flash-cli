@@ -2,10 +2,10 @@ package helpfunction
 
 import "fmt"
 
-
 func PrintHelp() {
 	fmt.Println("🛠️ Flash CLI Yordam:")
 	fmt.Println()
+	
 	fmt.Println("📁 Loyihaviy komandalar:")
 	fmt.Println("  init               → Loyihani boshlash (.flash papka va config)")
 	fmt.Println("  start \"msg\"        → Git add, commit, push bajarish")
@@ -20,4 +20,13 @@ func PrintHelp() {
 	fmt.Println("  box remove <name>  → Box faylni o‘chirish")
 	fmt.Println()
 
+	fmt.Println("🔑 Token va repo komandalar:")
+	fmt.Println("  token set <t>      → GitHub Personal Access Token saqlash")
+	fmt.Println("  token show         → Tokenni ko‘rsatish")
+	fmt.Println("  token clear        → Tokenni o‘chirish")
+	fmt.Println()
+	fmt.Println("  repo create <n>    → GitHub'da yangi repository yaratish")
+	fmt.Println("  repo clone <url>   → Mavjud repository'ni clone qilish")
+	fmt.Println("  repo delete <n>    → GitHub'dagi repository'ni o‘chirish")
+	fmt.Println()
 }
