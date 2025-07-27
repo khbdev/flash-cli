@@ -57,10 +57,6 @@ Agar PATH’ga qo‘shishda muammo bo‘lsa, uni Windows sozlamalaridan qo‘lda
 
 ---
 
-Albatta! Quyidagicha **toza va bir xil uslubda** tuzib berdim. Formatlash, imlo, tushunarlilik jihatidan yaxshilandi:
-
----
-
 ## 📁 Loyihaviy komandalar
 
 ```bash
