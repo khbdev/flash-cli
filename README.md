@@ -1,39 +1,38 @@
 
+
 # ⚡ Flash CLI
 
-Git komandalarini va developerlar ishini soddalashtiruvchi CLI vosita.
+A CLI tool that simplifies Git commands and automates developers' workflows.
 
 ---
 
-## 🔧 O‘rnatish
+## 🔧 Installation
 
 ### Linux / macOS:
 
-#### Versiya 1.0.0:
+#### Version 1.0.0:
+
 ```bash
 wget https://github.com/khbdev/flash-cli/releases/download/v1.0.0/flash
 chmod +x flash
 sudo mv flash /usr/local/bin/
-````
+```
 
-#### Versiya 2.0.0:
+#### Version 2.0.0:
 
 ```bash
 wget https://github.com/khbdev/flash-cli/releases/download/v2.00/flash
 chmod +x flash
 sudo mv flash /usr/local/bin/
-
 ```
-
-Albatta! Mana qisqaroq ko‘rsatma:
 
 ---
 
-## Windows PowerShell orqali `flash.exe` ni yuklab olish va o‘rnatish (v2.0.0)
+## 🪟 Install on Windows via PowerShell (v2.0.0)
 
-1. **PowerShell-ni administrator sifatida oching**
+1. **Open PowerShell as Administrator**
 
-2. Quyidagi buyruqlarni ketma-ket bajaring:
+2. Run the following commands step-by-step:
 
 ```powershell
 Invoke-WebRequest -Uri "https://github.com/khbdev/flash-cli/releases/download/v2.00/flash.exe" -OutFile "$env:USERPROFILE\flash.exe"
@@ -44,60 +43,56 @@ $newPath = $oldPath + ";$env:USERPROFILE\bin"
 [Environment]::SetEnvironmentVariable("Path", $newPath, [EnvironmentVariableTarget]::User)
 ```
 
-3. PowerShell-ni yoping va qaytadan oching, keyin `flash` deb yozing, ishlashi kerak.
+3. Close and reopen PowerShell. Now type `flash` to check if it's working.
 
 ---
 
-Agar PATH’ga qo‘shishda muammo bo‘lsa, uni Windows sozlamalaridan qo‘lda qo‘shing.
+If you face any issues with PATH, add it manually from Windows Environment Variables.
+
+✅ Now you can run the `flash` command from anywhere in the terminal.
 
 ---
 
-]
-✅ Endi `flash` komandasi terminalda ishlaydi.
-
----
-
-## 📁 Loyihaviy komandalar
+## 📁 Project Commands
 
 ```bash
-flash init                 # Loyihani boshlash (.flash papka va config.json)
-flash start "msg"          # Git add, commit, push bajarish
-flash -b main              # Default branchni o‘zgartirish (config.json)
+flash init                 # Start a project (.flash folder and config.json)
+flash start "msg"          # Run git add, commit, and push
+flash -b main              # Set default branch (saved in config.json)
 ```
 
 ---
 
-## 📦 Box komandalar
+## 📦 Box Commands
 
 ```bash
-flash box -c laravel       # Yangi box yaratish (laravel.box)
-flash box laravel          # Box ichidagi komandalarni ishga tushurish
-flash box edit laravel     # Box faylni tahrirlash (nano bilan)
-flash box status           # Mavjud box'lar ro‘yxatini ko‘rsatish
-flash box remove laravel   # Box faylni o‘chirish
+flash box -c laravel       # Create a new box (laravel.box)
+flash box laravel          # Execute commands inside the box
+flash box edit laravel     # Edit the box file (with nano)
+flash box status           # Show list of existing boxes
+flash box remove laravel   # Delete a box file
 ```
 
-📁 Box fayllar joylashuvi: `~/.flash/boxes/`
+📁 Box files location: `~/.flash/boxes/`
 
 ---
 
-## 🔑 Token va repo komandalar
+## 🔑 Token & Repo Commands
 
 ```bash
-flash token -c             # GitHub Personal Access Token saqlash
-flash token                # Tokenni ko‘rsatish
-flash token -d             # Tokenni o‘chirish
+flash token -c             # Save GitHub Personal Access Token
+flash token                # Show the current token
+flash token -d             # Delete the token
 
-flash repo                 # GitHub'da yangi repository yaratish (public)
-flash repo -p              # GitHub'da yangi repository yaratish (private)
+flash repo                 # Create a new public GitHub repository
+flash repo -p              # Create a new private GitHub repository
 ```
 
-📁 Token saqlanish joyi: `~/.flash/config.json`
+📁 Token is stored at: `~/.flash/config.json`
 
 ---
 
-## 👤 Muallif
+## 👤 Author
 
 Made by [Azizbek Xasanov](https://github.com/khbdev)
-
 
