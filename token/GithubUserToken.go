@@ -30,7 +30,7 @@ func Token(args []string) {
 func ShowToken() {
 	data, err := os.ReadFile(tokenFile)
 	if err != nil {
-		fmt.Println("❌ Token topilmadi.")
+		fmt.Println("Token topilmadi.")
 		return
 	}
 	fmt.Println("🔐 Token:", strings.TrimSpace(string(data)))
