@@ -12,7 +12,7 @@ func CreateBox(name string){
  
 	homeDir, err := os.UserHomeDir()
 		if err != nil {
-		fmt.Println("❌ Home directory topilmadi:", err)
+		fmt.Println(" Home directory topilmadi:", err)
 		return
 	}
 
@@ -21,20 +21,20 @@ func CreateBox(name string){
 
 	err = os.MkdirAll(boxDir, 0755)
 	if err != nil {
-		fmt.Println("❌ Papka yaratib bo‘lmadi:", err)
+		fmt.Println(" Papka yaratib bo‘lmadi:", err)
 		return
 	}
 
 	if _, err := os.Stat(boxFilePath); os.IsNotExist(err){
 		file, err := os.Create(boxFilePath)
 		if err != nil {
-			fmt.Println("❌ Fayl yaratishda xatolik:", err)
+			fmt.Println(" Fayl yaratishda xatolik:", err)
 			return
 		}
 		file.Close()
-		fmt.Println("📦 Yangi box fayl yaratildi:", boxFilePath)
+		fmt.Println(" Yangi box fayl yaratildi:", boxFilePath)
 	} else {
-		fmt.Println("⚠️ Box fayl allaqachon mavjud:", boxFilePath)
+		fmt.Println(" Box fayl allaqachon mavjud:", boxFilePath)
 	}
 
 		cmd := exec.Command("nano", boxFilePath)
@@ -46,12 +46,12 @@ func CreateBox(name string){
 	err = cmd.Run()
 
 		if err != nil {
-		fmt.Println("❌ Editorni ochishda xatolik:", err)
+		fmt.Println(" Editorni ochishda xatolik:", err)
 		return
 	}
 
 
-	fmt.Println("✅ Box tayyor:", name)
+	fmt.Println(" Box tayyor:", name)
 
 
 }
