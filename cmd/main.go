@@ -39,7 +39,7 @@ func main() {
 
 	case "start":
 		if len(os.Args) < 3 {
-			fmt.Println("❗ start uchun commit xabarini kiriting. Masalan: flash start \"Initial commit\"")
+			fmt.Println("start uchun commit xabarini kiriting. Masalan: flash start "Initial commit\"")
 			return
 		}
 		msg := os.Args[2]
