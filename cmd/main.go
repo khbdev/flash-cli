@@ -16,7 +16,7 @@ import (
 )
 
 func main() {
-	// ❗ Argumentlar tekshiruvi
+
 	if len(os.Args) < 2 {
 		helpfunction.PrintHelp()
 		return
@@ -24,18 +24,18 @@ func main() {
 
 	command := os.Args[1]
 
-	// 🔀 Branch config: flash -b dev
+
 	if command == "-b" {
 		if configbranchedit.Configbranchedit() {
 			return
 		}
 	}
 
-	// 🔁 Komandalar
+
 	switch command {
 	case "init":
 		flashcore.InitProject()
-		time.Sleep(time.Millisecond * 1) // kichik delay
+		time.Sleep(time.Millisecond * 1) 
 
 	case "start":
 		if len(os.Args) < 3 {
