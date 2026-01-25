@@ -4,34 +4,30 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
-	"path/filepath"
+
 )
 
 func RunBox(name string) {
 
-	homeDir, err := os.UserHomeDir()
+boxFilePath, err := getBoxPath(name)
 	if err != nil {
-		fmt.Println("Home directory topilmadi:", err)
+		fmt.Println(err)
 		return
 	}
-
-
-	boxPath := filepath.Join(homeDir, ".flash", "boxes", name+".box")
-
 	
-	if _, err := os.Stat(boxPath); os.IsNotExist(err) {
-		fmt.Println(" Box topilmadi:", name)
+	if _, err := os.Stat(boxFilePath); os.IsNotExist(err) {
+		fmt.Println("Box topilmadi:", name)
 		return
 	}
 
 	
-	content, err := os.ReadFile(boxPath)
+	content, err := os.ReadFile(boxFilePath)
 	if err != nil {
 		fmt.Println("Faylni o‘qishda xatolik:", err)
 		return
 	}
 
-	fmt.Printf("🚀 Box ishga tushyapti: %s\n\n", name)
+	fmt.Printf("Box ishga tushyapti: %s\n\n", name)
 
 	
 	cmd := exec.Command("bash", "-c", string(content))
@@ -41,9 +37,9 @@ func RunBox(name string) {
 
 	err = cmd.Run()
 	if err != nil {
-		fmt.Println("❌ Komandalarni bajarishda xatolik:", err)
+		fmt.Println(" Komandalarni bajarishda xatolik:", err)
 		return
 	}
 
-	fmt.Println("\n✅ Box bajarildi:", name)
+	fmt.Println("\n Box bajarildi:", name)
 }

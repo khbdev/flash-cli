@@ -3,32 +3,27 @@ package box
 import (
 	"fmt"
 	"os"
-	"path/filepath"
 )
 
 func RemoveBox(name string) {
 
-	homeDir, err := os.UserHomeDir()
+		boxFilePath, err := getBoxPath(name)
 	if err != nil {
-		fmt.Println("❌ Home directory topilmadi:", err)
+		fmt.Println(err)
 		return
 	}
-
-
-	boxPath := filepath.Join(homeDir, ".flash", "boxes", name+".box")
-
-
-	if _, err := os.Stat(boxPath); os.IsNotExist(err) {
-		fmt.Println("❌ Box topilmadi:", name)
+   
+	if _, err := os.Stat(boxFilePath); os.IsNotExist(err) {
+		fmt.Println("Box topilmadi:", name)
 		return
 	}
 
 	
-	err = os.Remove(boxPath)
+	err = os.Remove(boxFilePath)
 	if err != nil {
-		fmt.Println("❌ O‘chirishda xatolik:", err)
+		fmt.Println("O‘chirishda xatolik:", err)
 		return
 	}
 
-	fmt.Println("🗑️ Box o‘chirildi:", name)
+	fmt.Println("Box o‘chirildi:", name)
 }

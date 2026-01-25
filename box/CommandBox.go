@@ -24,17 +24,17 @@ func CommandBox(args []string) {
 		}
 	CreateBox(args[1])
 
-	case "status":
+	case "-s":
 	BoxStatus()
 
-	case "edit":
+	case "-e":
 		if len(args) < 2 {
 			fmt.Println("Qaysi box'ni tahrirlash kerak: flash box edit golang")
 			return
 		}
 	EditBox(args[1])
 
-	case "remove":
+	case "-r":
 		if len(args) < 2 {
 			fmt.Println("Qaysi box'ni o‘chirish kerak: flash box remove golang")
 			return

@@ -13,11 +13,11 @@ func PrintHelp() {
 	fmt.Println()
 
 	fmt.Println("📦 Box komandalar:")
-	fmt.Println(" flash box -c <name>      → Yangi box yaratish (masalan: flash box -c laravel)")
-	fmt.Println(" flash box <name>         → Box ichidagi komandalarni ishga tushurish")
-	fmt.Println(" flash box status         → Mavjud box'lar ro‘yxatini ko‘rsatish")
-	fmt.Println(" flash box edit <name>    → Box faylni tahrirlash (nano editor bilan)")
-	fmt.Println(" flash box remove <name>  → Box faylni o‘chirish")
+	fmt.Println(" flash box -c name      → Yangi box yaratish (masalan: flash box -c laravel)")
+	fmt.Println(" flash box name        → Box ichidagi komandalarni ishga tushurish")
+	fmt.Println(" flash box -s       → Mavjud box'lar ro‘yxatini ko‘rsatish")
+	fmt.Println(" flash box -e name    → Box faylni tahrirlash (nano editor bilan)")
+	fmt.Println(" flash box -r name  → Box faylni o‘chirish")
 	fmt.Println()
 
 	fmt.Println("🔑 Token va repo komandalar:")
