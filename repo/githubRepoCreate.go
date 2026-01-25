@@ -13,27 +13,27 @@ import (
 
 func Repo() {
 	if len(os.Args) < 3 {
-		fmt.Println("❌ Iltimos, repo nomini bering: `flash repo my-repo-name [-pri|-pub]`")
+		fmt.Println(" Iltimos, repo nomini bering: `flash repo my-repo-name [-pri|-pub]`")
 		return
 	}
 
 	repoName := os.Args[2]
 
-	// Default: public
+
 	isPrivate := false
 	if len(os.Args) > 3 {
 		arg := strings.ToLower(os.Args[3])
 		if arg == "-p" {
 			isPrivate = true
 		}  else {
-			fmt.Println("⚠️ Belgilanmagan parametr:", arg)
-			fmt.Println("👉 Iltimos, `-pri` (private) yoki `-pub` (public) yozing.")
+			fmt.Println(" Belgilanmagan parametr:", arg)
+			fmt.Println("Iltimos, `-pri` (private) yoki `-pub` (public) yozing.")
 			return
 		}
 	}
 
 	githubToken := token.GetToken()
-	fmt.Println("⏳ GitHub repo yaratilmoqda...")
+	fmt.Println(" GitHub repo yaratilmoqda...")
 
 	data := map[string]interface{}{
 		"name":    repoName,
@@ -42,13 +42,13 @@ func Repo() {
 
 	body, err := json.Marshal(data)
 	if err != nil {
-		fmt.Println("❌ JSON marshal xatosi:", err)
+		fmt.Println(" JSON marshal xatosi:", err)
 		return
 	}
 
 	req, err := http.NewRequest("POST", "https://api.github.com/user/repos", bytes.NewBuffer(body))
 	if err != nil {
-		fmt.Println("❌ So‘rov yaratishda xato:", err)
+		fmt.Println(" So‘rov yaratishda xato:", err)
 		return
 	}
 
@@ -59,7 +59,7 @@ func Repo() {
 	client := &http.Client{}
 	resp, err := client.Do(req)
 	if err != nil {
-		fmt.Println("❌ So‘rov yuborishda xato:", err)
+		fmt.Println(" So‘rov yuborishda xato:", err)
 		return
 	}
 	defer resp.Body.Close()
@@ -69,8 +69,8 @@ func Repo() {
 
 		var result map[string]interface{}
 		if err := json.Unmarshal(bodyBytes, &result); err != nil {
-			fmt.Println("✅ Repo yaratildi:", repoName)
-			fmt.Println("⚠️ Ammo linkni o‘qib bo‘lmadi.")
+			fmt.Println("Repo yaratildi:", repoName)
+			fmt.Println(" Ammo linkni o‘qib bo‘lmadi.")
 			return
 		}
 
