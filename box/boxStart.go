@@ -27,7 +27,7 @@ func RunBox(name string) {
 	
 	content, err := os.ReadFile(boxPath)
 	if err != nil {
-		fmt.Println("❌ Faylni o‘qishda xatolik:", err)
+		fmt.Println("Faylni o‘qishda xatolik:", err)
 		return
 	}
 

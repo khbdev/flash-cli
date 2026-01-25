@@ -10,14 +10,16 @@ import (
 
 func CreateBox(name string){
  
-	homeDir, err := os.UserHomeDir()
-		if err != nil {
-		fmt.Println(" Home directory topilmadi:", err)
+	
+	boxFilePath, err := getBoxPath(name)
+	if err != nil {
+		fmt.Println(err)
 		return
 	}
 
-	boxDir := filepath.Join(homeDir, ".flash", "boxes")
-	boxFilePath := filepath.Join(boxDir, name+".box")
+
+	boxDir := filepath.Dir(boxFilePath)
+   
 
 	err = os.MkdirAll(boxDir, 0755)
 	if err != nil {
@@ -52,6 +54,5 @@ func CreateBox(name string){
 
 
 	fmt.Println(" Box tayyor:", name)
-
 
 }
