@@ -4,8 +4,6 @@ import (
 	"fmt"
 
 	"os"
-	"time"
-
 	"flash/box"
 	"flash/configbranchedit"
 	"flash/flashcore"
@@ -35,11 +33,9 @@ func main() {
 	switch command {
 	case "init":
 		flashcore.InitProject()
-		time.Sleep(time.Millisecond * 1) 
-
 	case "start":
 		if len(os.Args) < 3 {
-			fmt.Println("start uchun commit xabarini kiriting. Masalan: flash start "Initial commit\"")
+			fmt.Println("start uchun commit xabarini kiriting. Masalan: flash start flash")
 			return
 		}
 		msg := os.Args[2]
@@ -58,7 +54,7 @@ func main() {
 		helpfunction.PrintHelp()
 
 	default:
-		fmt.Println("❓ Noma’lum komanda:", command)
+		fmt.Println("Noma’lum komanda:", command)
 		helpfunction.PrintHelp()
 	}
 }

@@ -11,7 +11,7 @@ func RunBox(name string) {
 
 	homeDir, err := os.UserHomeDir()
 	if err != nil {
-		fmt.Println("❌ Home directory topilmadi:", err)
+		fmt.Println("Home directory topilmadi:", err)
 		return
 	}
 
@@ -20,7 +20,7 @@ func RunBox(name string) {
 
 	
 	if _, err := os.Stat(boxPath); os.IsNotExist(err) {
-		fmt.Println("❌ Box topilmadi:", name)
+		fmt.Println(" Box topilmadi:", name)
 		return
 	}
 
