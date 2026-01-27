@@ -1,4 +1,4 @@
-package configbranch
+package config
 
 
 type Config struct {

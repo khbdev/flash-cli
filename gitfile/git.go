@@ -2,7 +2,8 @@ package gitfile
 
 import (
 	"encoding/json"
-	configbranch "flash/ConfigBranch"
+
+	"flash/config"
 	"flash/helpersFunction"
 	"fmt"
 	"os"
@@ -19,7 +20,7 @@ func Start(msg string) {
         return
     }
 
-    var config configbranch.Config
+    var config config.Config
     if err := json.Unmarshal(configData, &config); err != nil {
         fmt.Println(" config.json noto‘g‘ri formatda:", err)
         return

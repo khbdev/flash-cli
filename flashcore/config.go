@@ -2,7 +2,8 @@ package flashcore
 
 import (
 	"encoding/json"
-	configbranch "flash/ConfigBranch"
+	"flash/config"
+
 	"fmt"
 	"os"
 )
@@ -11,8 +12,8 @@ import (
 
 const configPath = ".flash/config.json"
 
-func LoadConfig() (configbranch.Config, error) {
-	var cfg configbranch.Config
+func LoadConfig() (config.Config, error) {
+	var cfg config.Config
 	data, err := os.ReadFile(configPath)
 	if err != nil {
 		return cfg, fmt.Errorf("config o'qib bo'lmadi: %w", err)
@@ -26,7 +27,7 @@ func LoadConfig() (configbranch.Config, error) {
 	return cfg, nil
 }
 
-func SaveConfig(cfg configbranch.Config) error {
+func SaveConfig(cfg config.Config) error {
 	data, err := json.MarshalIndent(cfg, "", "  ")
 	if err != nil {
 		return fmt.Errorf("jsonga o'girishda xatolik: %w", err)
