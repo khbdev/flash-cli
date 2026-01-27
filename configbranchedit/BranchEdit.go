@@ -1,4 +1,5 @@
 package configbranchedit
+
 import (
 	"flash/flashcore"
 	"fmt"
