@@ -19,7 +19,7 @@ func Token(args []string) {
 			deleteToken()
 			return
 		default:
-			fmt.Println("⚠️ Noma'lum flag:", args[0])
+			fmt.Println("Noma'lum flag:", args[0])
 			return
 		}
 	}
@@ -33,7 +33,7 @@ func ShowToken() {
 		fmt.Println("Token topilmadi.")
 		return
 	}
-	fmt.Println("🔐 Token:", strings.TrimSpace(string(data)))
+	fmt.Println("Token:", strings.TrimSpace(string(data)))
 	
 }
 
@@ -45,27 +45,27 @@ func createToken() {
 
 	err := cmd.Run()
 	if err != nil {
-		fmt.Println("❌ Token yozishda xatolik:", err)
+		fmt.Println("Token yozishda xatolik:", err)
 		return
 	}
 
-	fmt.Println("✅ Token saqlandi:", tokenFile)
+	fmt.Println("Token saqlandi:", tokenFile)
 }
 
 func deleteToken() {
 	err := os.Remove(tokenFile)
 	if err != nil {
-		fmt.Println("❌ Token o‘chirishda xatolik:", err)
+		fmt.Println(" Token o‘chirishda xatolik:", err)
 		return
 	}
-	fmt.Println("🗑️  Token o‘chirildi.")
+	fmt.Println("Token o‘chirildi.")
 }
 
 
 func GetToken() string {
 	data, err := os.ReadFile(tokenFile)
 	if err != nil {
-		fmt.Println("❌ Token topilmadi.")
+		fmt.Println("Token topilmadi.")
 		return ""
 	}
 	return strings.TrimSpace(string(data))
