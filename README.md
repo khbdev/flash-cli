@@ -10,13 +10,6 @@ A CLI tool that simplifies Git commands and automates developers' workflows.
 
 ### Linux / macOS:
 
-#### Version 1.0.0:
-
-```bash
-wget https://github.com/khbdev/flash-cli/releases/download/v1.0.0/flash
-chmod +x flash
-sudo mv flash /usr/local/bin/
-```
 
 #### Version 2.0.0:
 
