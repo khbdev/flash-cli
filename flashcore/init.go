@@ -1,6 +1,7 @@
 package flashcore
 
 import (
+	configbranch "flash/ConfigBranch"
 	"fmt"
 	"os"
 )
@@ -12,7 +13,7 @@ func InitProject() {
 		return
 	}
 
-	cfg := Config{
+	cfg := configbranch.Config{
 		DefaultBranch: "main",
 	}
 

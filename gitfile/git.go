@@ -2,14 +2,12 @@ package gitfile
 
 import (
 	"encoding/json"
+	configbranch "flash/ConfigBranch"
 	"flash/helpersFunction"
 	"fmt"
 	"os"
 )
 
-type Config struct {
-    DefaultBranch string `json:"default_branch"`
-}
 
 
 func Start(msg string) {
@@ -21,7 +19,7 @@ func Start(msg string) {
         return
     }
 
-    var config Config
+    var config configbranch.Config
     if err := json.Unmarshal(configData, &config); err != nil {
         fmt.Println(" config.json noto‘g‘ri formatda:", err)
         return
