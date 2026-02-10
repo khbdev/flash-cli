@@ -32,7 +32,7 @@ func CreateBox(name string) {
 		file.Close()
 		fmt.Println(" Yangi box fayl yaratildi:", boxFilePath)
 	} else {
-		fmt.Println(" Box fayl allaqachon mavjud:", boxFilePath)
+		fmt.Println(" Box fayl allaqachon :", boxFilePath)
 	}
 
 	cmd := exec.Command("nano", boxFilePath)
