@@ -26,7 +26,7 @@ func CreateBox(name string) {
 	if _, err := os.Stat(boxFilePath); os.IsNotExist(err) {
 		file, err := os.Create(boxFilePath)
 		if err != nil {
-			fmt.Println(" Fayl yaratishda xatolik:", err)
+			fmt.Println(" Fayl yaratishd:", err)
 			return
 		}
 		file.Close()
