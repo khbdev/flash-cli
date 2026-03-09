@@ -47,6 +47,6 @@ func CreateBox(name string) {
 		return
 	}
 
-	fmt.Println(" Box tayyor:", name)
+	fmt.Println("Box Tayyor", name)
 
 }
