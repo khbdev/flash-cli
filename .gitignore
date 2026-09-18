@@ -1,0 +1,12 @@
+# Build natijalari
+/flash
+/bin/
+/dist/
+
+# IDE
+/.idea/
+/.vscode/
+
+# Test va coverage
+*.test
+*.out

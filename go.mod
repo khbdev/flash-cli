@@ -1,3 +1,3 @@
-module flash
+module github.com/khbdev/flash-cli
 
-go 1.22.3
+go 1.24
